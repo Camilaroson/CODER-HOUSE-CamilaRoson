@@ -20,7 +20,6 @@ class NuevoProducto {
 }
 
 
-
 //traigo productos
 
 app.get('/api/productos', (req,res) =>{
@@ -41,9 +40,10 @@ app.post('/api/productos', (req: any,res: any)=>{
 
     const {id,titulo, precio} = req.body
     const producto = new NuevoProducto(id,titulo,precio)
+    producto.id = productos.length+1
     productos.push(producto)
     res.sendStatus(201)
-
+    
 })
 
 
