@@ -20,6 +20,7 @@ class NuevoProducto {
 }
 
 
+
 //traigo productos
 
 app.get('/api/productos', (req,res) =>{
@@ -43,7 +44,7 @@ app.post('/api/productos', (req: any,res: any)=>{
     producto.id = productos.length+1
     productos.push(producto)
     res.sendStatus(201)
-    
+
 })
 
 
