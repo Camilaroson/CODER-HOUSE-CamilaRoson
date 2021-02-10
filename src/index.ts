@@ -31,7 +31,7 @@ app.get('/api/productos', (req,res) =>{
 
 app.get('/api/productos/:id', (req,res) =>{
     const id = req.params.id
-    const producto = productos.find(producto => producto.id === id)
+    const producto = productos.find(producto => producto.id == id)
     producto ? res.json(producto) : res.sendStatus(404)
 })
 
@@ -49,7 +49,7 @@ app.post('/api/productos', (req: any,res: any)=>{
 
 
 
-app.listen(8080,() => {
+app.listen(3000,() => {
     console.log('Server listo');
     
 })
